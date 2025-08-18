@@ -1,196 +1,268 @@
 :root {
-  --color-1: #AF9982;
-  --color-2: #1B1916;
-  --color-3: #45372c;
-  --color-4: #848C84;
-
-  --font-serif: 'Cormorant Garamond', serif;
-  --font-sans: 'Space Grotesk', sans-serif;
+    --font: 'Montserrat', sans-serif;
+    --color-bg: #0D0D0D;       
+    --color-text: #F8FAFC;     
+    --color-accent: #8B5CF6;   
+    --color-secondary: #22D3EE;
 }
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    text-decoration: none;
+    border: none;
+    outline: none;
+    font-family: var(--font);
+}
+
+html {
+    font-size: 62.5%;
+    scroll-behavior: smooth;
+}
+
 
 body {
-  margin: 0;
-  background-color: var(--color-3);
-  color: var(--color-1);
-  font-family: var(--font-serif);
+    width: 100%;
+    height: 100vh;
+    overflow-x: hidden;
+    background-color: var(--color-bg);
+    color: var(--color-text);
 }
 
-.top-bar {
-  background-color: var(--color-2);
-  padding: 0.5rem;
-  display: flex;
-  justify-content: left;
-  align-items: center;
-  width: 95%;
-  border-radius: 10px;
-  margin: 0 auto;
+header {
+    margin-top: 20px;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    padding: 1rem 9%;
+    background-color: transparent;
+    filter: drop-shadow(10px);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    z-index: 100;
 }
 
-.top-bar h1 {
-  margin: 0;
-  font-family: var(--font-serif);
-  color: var(--color-1);
-
+.logo {
+    font-size: 3rem;
+    color: var(--color-secondary);
+    font-weight: 800;
+    cursor: pointer;
+    transition: 0.5s ease;
 }
 
-main {
-  padding: 10px;
+.logo:hover{
+    transform: scale(1.1);
 }
 
-.container {
-  display: flex;
-  gap: 10px;               
-  justify-content: center;
-  align-items: flex-start;
-  flex-wrap: nowrap;
-  width: 95%;
-  margin: 0 auto;
-  overflow-x: auto;        
-  box-sizing: border-box;
-  
+nav a{
+    font-size: 1.8rem;
+    color: var(--color-text);
+    margin-left: 4rem;
+    font-weight: 500;
+    transition: 0.3s ease;
+    border-bottom: 3px solid transparent;
 }
 
-.rectangle {
-  border-radius: 10px;
-  color: var( --color-1) ;
-  background-color: var(--color-2);
-  display: flex;               
-  justify-content: flex-start;
-  align-items: flex-end;
-  font-weight: medium;
-  margin-bottom: 10px;
-  padding: 1rem;
-  cursor: pointer;
-  user-select: none;
-  font-family: var(--font-serif);
+nav a:hover,
+nav a.active {
+    color: var(--color-secondary);
+    border-bottom: 3px solid var(--color-accent);
 }
 
-.rect1 {
-  flex: 4 1 0;
-  height: 275px;
-  font-size: 28px;
-  font-family: var(--font-serif);
+@media(max-width:995px){
+    nav{
+        position: absolute;
+        display: none;
+        top: 0;
+        right: 0%;
+        width: 40%;
+        border-left: 3px solid var(--color-accent);
+        border-bottom: 3px solid var(--color-accent);
+        border-bottom-left-radius: 2rem;
+        padding: 1rem solid; 
+        background-color: var(--color-bg);
+        border-top: 0.1 rem solid rgb(0,0,0.1)
+    }
+
+    nav.active {
+    display: block;
+    }
+
+    nav a {
+    display: block;
+    font-size: 2rem;
+    margin: 3rem 0;
+    }
+
+    nav a:hover,
+    nav a.active {
+    padding: 1rem;
+    border-radius: 0.5rem;
+    border-bottom: 0.5rem solid var(--color-accent)
+    }
 }
 
-.rect2 {
-  flex: 2 1 0;
-  height: 275px;
+section {
+    min-height: 100vh;
+    padding: 5rem 9% 5rem;
 }
 
-.rect2 img.profile-image {
-  max-width: 100%;
-  max-height: 100%;
-  border-radius: 10px;
-  display: block;
-  object-fit: contain; 
+.home {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 8rem;
+    background-color: var(--color-bg);
 }
 
-
-.rect3 {
-  flex: 3 1 0;
-  height: 275px;
-  font-size: 26px;
-  font-family: var(--font-serif);
-  }
-
-.second_layer .container {
-  display: flex;
-  gap: 10px;               
-  justify-content: center;
-  align-items: flex-start;
-  margin-bottom: 0;
-  margin-top: 0;
-  flex-wrap: nowrap;
-  width: 95%;
-  margin: 0 auto;
-  overflow-x: auto;        
-  box-sizing: border-box;
+.home .home-content h1{
+    font-size: 6rem;
+    font-weight: 700;
+    line-height: 1.3;
 }
 
-.second_layer .rectangle{
-  border-radius: 10px;
-  display: flex;               
-  justify-content: flex-start;
-  align-items: flex-end;
-  font-weight: medium;
-  padding: 1rem;
-  cursor: pointer;
-  user-select: none;
-  font-family: var(--font-serif);
+span {
+    color: var(--color-secondary);
 }
 
-.rect4 {
-  flex: 3 1 0;
-  height: 200px;
-  color: var( --color-1) ;
-  background-color: var(--color-2);
+.home-content h3{
+    font-size: 4rem;
+    margin-bottom: 1rem;
+    font-weight: 700;
 }
 
-.rect4 {
-  margin: 0;
-  font-size: 16px;
-  line-height: 1.5;
-  opacity: 1; 
-  font-family: var(--font-sans)
+.home-content p{
+    font-size: 1.6rem;
 }
 
-  .rect5 {
-  display: flex;
-  flex-direction: column;       
-  justify-content: center;      
-  padding: 1.5rem 2rem;         
-  height: 200px;                
-  box-sizing: border-box;
-  color: var(--color-2);
-  background-color: var(--color-4); 
-  border-radius: 10px;
-  font-family: var(--font-sans);
-  text-align: left;             
-  gap: 0.5rem;                  
+.home-img{
+    border-radius: 50%;   
 }
 
-.rect5 h2 {
-  margin: 0;
-  font-family: var(--font-serif);
-  font-size: 34px;
-  font-weight: 600;
-  line-height: 1.2;
-  text-align: left;
+.home-img img{
+    position: relative;
+    width: 18vw;
+    border-radius: 50%;
+    box-shadow: 0 0 25px var(--color-accent);
+    cursor: pointer;
+    transition: 0.2s linear;
 }
 
-.rect5 p {
-  margin: 0;
-  font-size: 1.1rem;
-  line-height: 1.5;
-  opacity: 0.85; 
-  font-family: var(--font-sans)
+.home-img img:hover{
+    font-size: 1.8rem;
+    font-weight: 500;
 }
 
-.rect6 {
-  flex: 1.5 1 0;
-  height: 50px;
-  margin-top: 10px;
-  color: var( --color-1) ;
-  background-color: var(--color-2);
+.social-icons a{
+    display: inline-flex;
+    justify-content: center;
+    align-items: center;
+    width: 4rem;
+    height: 4rem;
+    background-color: transparent;
+    border: 0.2rem solid var(--color-accent);
+    font-size: 2rem;
+    border-radius: 50%;
+    margin: 3rem 1.5rem 3rem 0;
+    transition: 0.3s ease;
+    color: var(--color-accent);
 }
 
-.contact p {
-  font-family: var(--font-sans);
-  color: var(--color-1);
+.social-icons a:hover{
+    color: var(--color-bg);
+    transform: scale(1.3) translateY(-5px);
+    background-color: var(--color-accent);
+    box-shadow: 0 0 25px var(--color-accent)
 }
 
-.social-links a {
-  color: var(--color-1);
-  margin-right: 1rem;
-  transition: color 0.3s ease;
+.btn{
+    display: inline-block;
+    padding: 1rem 2.8rem;
+    background-color: var(--color-bg);
+    border-radius: 4rem;
+    font-size: 1.6rem;
+    color: var(--color-accent);
+    letter-spacing: 0.3rem;
+    font-weight: 600;
+    border: 2px solid var(--color-accent);
+    transition: 0.3s ease;
+    cursor: pointer;
 }
 
-.social-links a:hover {
-  color: var(--color-4);
+.btn:hover{
+    transform: scale3d(1.3) translateY(-5px);
+    background-color: var(--color-accent);
+    color: var(--color-bg);
+    box-shadow: 0 0 25px var(--color-accent);
 }
 
-.social-links i {
-  vertical-align: middle;
+.typing-text{
+    font-size: 34px;
+    font-weight: 600;
+    min-width: 280px;
 }
 
+.typing-text span{
+    position: relative;
+}
 
+.typing-text span::before{
+    content: "Sound Engineer";
+    color: var(--color-secondary);
+    animation: words 20s infinite;
+}
+
+.typing-text span::after{
+    content:"";
+    background-color: var(--color-bg);
+    position: absolute;
+    width: calc(100% + 8px);
+    height: 100%;
+    border-left: 3px solid var(--color-bg);
+    right: -8;
+    animation: cursor 0.6s infinite;
+}
+
+@keyframes cursor{
+    to{
+        border-left: 3px solid var(--color-accent);
+    }
+}
+
+@keyframes words{
+   0%, 50%{
+    content: "Product Designer";
+   } 
+   51%, 100%{
+    content: "Sound Engineer";
+   }
+}
+
+@media (max-width: 1000px){
+    .home{
+        gap: 4rem;
+    }
+}
+
+@media (max-width: 995px){
+    .home{
+        flex-direction: column;
+        margin: 5rem 4rem;
+    }
+
+    .home .home-content h3{
+        font-size: 2.5rem;
+    }
+
+    .home-content h1{
+        font-size: 5rem;
+    }
+
+    .home-img img{
+        width: 70vW;
+        margin-top: 4rem;
+    }
+}

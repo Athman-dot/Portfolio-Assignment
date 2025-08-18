@@ -3,60 +3,43 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond&family=Space+Grotesk&display=swap" rel="stylesheet" />
-  <link rel="stylesheet" href="styles.css" />
-  <link
-  rel="stylesheet"
-  href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
-  crossorigin="anonymous"
-  referrerpolicy="no-referrer"
-/>
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;600;700&display=swap">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css">
+  <link rel="stylesheet" href="styles.css">
+  <link rel="stylesheet" href="assets">
   <title>My Portfolio</title>
 </head>
 
 <body>
-  <header class="top-bar">
-    <h1>Athman Mwakughu</h1>
+  <header>
+    <a href="#" class="logo">Athman Mwakghu</a>
+
+    <nav>
+      <a href="#" class="active"> Home</a>
+      <a href="#"> Services</a>
+      <a href="#"> Skills</a>
+      <a href="#"> Education</a>
+      <a href="#"> Experience</a>
+      <a href="#"> Contact</a>
+    </nav>
   </header>
 
-  <main>
-    <section class="first_layer">
-      <div class="container">
-        <div class="rectangle rect1">
-          <p>Creative direction grounded in clarity and emotion.</p>
-        </div>
-        <div class="rectangle rect2">
-            <div class="profile-image">
-                <img src="assets/Portrait Assignment.jpg" alt="profile-image"/>
-            </div>
-        </div>
-        <div class="rectangle rect3">
-            <h2>Projects</h2>
-        </div>
-      </div>
-    </section>
-
-    <section class="second_layer">
-        <div class="container">
-            <div class="rectangle rect4">
-                <p>Athman Mwakughu is a product design student. His work merges minimalism with emotional depth to create thoughtful, compelling design systems.</p>
-            </div>
-            <div class="rectangle rect5">
-                <h2>Contact me</h2>
-      <p>Email me at: athmanmwakughu@student.moringaschool.com</p>
-            </div>
-            <div class="rectangle rect6">
-                <div class="social-links">
-  <a href="https://github.com/Athman-dot" target="_blank" rel="noopener noreferrer" aria-label="GitHub">
-    <i class="fab fa-github fa-2x"></i>
-  </a>
-  <a href="https://instagram.com/_.Athman" target="_blank" rel="noopener noreferrer" aria-label="Instagram">
-    <i class="fab fa-instagram fa-2x"></i>
-  </a>
-</div>
-            </div>
-        </div>
-    </section>
-  </main>
+<Section class="home">
+  <div class="home-img">
+    <img src="assets/avatar.jpg" alt="profile-image">
+  </div>
+  <div class="home-content">
+    <h1>Hi, it's <span>Athman</span></h1>
+    <h3 class="typing-text">I'm a <span></span></h3>
+    <p>Focused on creating clear, accessible, and user-first digital experiences. I combine systems thinking with empathy to design solutions that are both intuitive and impactful.” </p>
+    <div class="social-icons">
+      <a href="#"><i class="fa-brands fa-linkedin"></i></a>
+      <a href="#"><i class="fa-brands fa-github"></i></a>
+      <a href="#"><i class="fa-brands fa-x-twitter"></i></a>
+      <a href="#"><i class="fa-brands fa-instagram"></i></a>
+    </div>
+        <a href="#" class="btn"> Hire me</a>
+  </div> 
+</Section>
 </body>
 </html>
