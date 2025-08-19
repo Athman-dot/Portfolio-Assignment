@@ -7,24 +7,25 @@
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css">
   <link rel="stylesheet" href="styles.css">
   <link rel="stylesheet" href="assets">
+  <link rel="icon" href="assets/Favicon.png" type="png">
   <title>My Portfolio</title>
 </head>
 
 <body>
   <header>
-    <a href="#" class="logo">Athman Mwakughu</a>
+    <a href="home" class="logo">Athman Mwakughu</a>
 
     <nav>
-      <a href="#" class="active"> Home</a>
-      <a href="#"> Services</a>
-      <a href="#"> Skills</a>
-      <a href="#"> Education</a>
-      <a href="#"> Experience</a>
-      <a href="#"> Contact</a>
+      <a href="#home" class="active"> Home</a>
+      <a href="#services"> Services</a>
+      <a href="#skills"> Skills</a>
+      <a href="#education"> Education</a>
+      <a href="#experience"> Experience</a>
+      <a href="#contact"> Contact</a>
     </nav>
   </header>
 
-<Section class="home">
+ <section id="home" class="home">
   <div class="home-img">
     <img src="assets/avatar.jpg" alt="profile-image">
   </div>
@@ -33,13 +34,180 @@
     <h3 class="typing-text">I'm a <span></span></h3>
     <p>Focused on creating clear, accessible, and user-first digital experiences. I combine systems thinking with empathy to design solutions that are both intuitive and impactful.” </p>
     <div class="social-icons">
-      <a href="#"><i class="fa-brands fa-linkedin"></i></a>
-      <a href="#"><i class="fa-brands fa-github"></i></a>
-      <a href="#"><i class="fa-brands fa-x-twitter"></i></a>
-      <a href="#"><i class="fa-brands fa-instagram"></i></a>
+      <a href="https://www.linkedin.com/"><i class="fa-brands fa-linkedin"></i></a>
+      <a href="https://github.com/"><i class="fa-brands fa-github"></i></a>
+      <a href="https://x.com/"><i class="fa-brands fa-x-twitter"></i></a>
+      <a href="https://www.instagram.com/"><i class="fa-brands fa-instagram"></i></a>
     </div>
-        <a href="#" class="btn"> Hire me</a>
+        <a href="https://workspace.google.com/intl/en-US/gmail/" class="btn"> Hire me</a>
   </div> 
-</Section>
+ </Section>
+
+ <section id="services">
+  <h2>Services</h2>
+   <p>What I can do for you</p>
+
+   <div class="section-container">
+    <div class="section-card">
+      <h3>UI/UX Design</h3>
+      <p>Designing user-friendly interfaces with a focus on accessibility and experience.</p>
+    </div>
+
+      <div class="section-card">
+      <h3>Sound Mixing</h3>
+      <p>Professional live sound mixing for clear, balanced audio.</p>
+    </div>
+
+        <div class="section-card">
+      <h3>Web Development</h3>
+      <p>Building responsive and modern websites tailored to client needs.</p>
+    </div>
+  </div>
+ </section>
+
+ <section id="skills">
+  <h2>Skills</h2>
+  <p class="sub-text">Here is some projects I have done:</p>
+  
+  <div class="skills-container">
+    <div class="skill">UI/UX Design</div>
+    <div class="skill">Sound Engineering</div>
+    <div class="skill">Web Development</div>
+  </div>
+
+  <div class="projects-container">
+    <div class="project-card">
+      <img src="assets/Project 1.webp" alt="Project 1">
+      <h4>Designs</h4>
+      <p>Projects made with HTML and CSS.</p>
+    </div>
+
+    <div class="project-card">
+      <img src="assets/Project 2.jpg" alt="Project 2">
+      <h4>Sound</h4>
+      <p>Events and public address systems</p>
+    </div>
+  </div>
+ </section>
+
+ </section>
+
+ <section id="education">
+   <h2 class="section-title">Education</h2>
+  <p class="section-subtitle">My academic background and learning journey.</p>
+
+  <div class="section-container">
+    <div class="section-card">
+      <h3>Moringa School</h3>
+      <p>Product Design (2025 - Present)</p>
+    </div>
+
+    <div class="section-card">
+      <h3>The Kenya Institute of Management</h3>
+      <p>Diploma in Human Resource Management (2021 - 2023)</p>
+    </div>
+  </div>
+
+ </section>
+
+ <section id="experience">
+  <h2>Experience</h2>
+  <p>Representation of my work history.</p>
+
+  <div class="section-container">
+    
+    <div class="section-card">
+      <h3>Junior Web Developer — XYZ Company</h3>
+      <p>Jan 2023 – Present</p>
+      <ul>
+        <li>Developed responsive web interfaces using HTML, CSS, and JS.</li>
+        <li>Collaborated with design and backend teams to implement features.</li>
+      </ul>
+    </div>
+
+        <div class="section-card">
+      <h3>Sound Engineer — ABC Events</h3>
+      <p>Mar 2021 – Dec 2022</p>
+      <ul>
+        <li>Managed live sound setups for events up to 500+ attendees.</li>
+        <li>Optimized audio mixing for clear and balanced sound.</li>
+      </ul>
+    </div>
+  </div>
+ </section>
+
+ <section id="contact">
+  <h2>Contact</h2>
+  <div class="section-container">
+<div class="section-container">
+    <div class="section-card">
+      <h3>Contact Me</h3>
+      <p>Email: <a href="mailto:athman5901@gmail.com">athman5901@gmail.com</a></p>
+      <p>Mobile: <a href="tel: +254 795 091905"> +254 795 091905</a></p>
+      <div class="social-icons">
+      <a href="https://www.linkedin.com/"><i class="fa-brands fa-linkedin"></i></a>
+      <a href="https://github.com/"><i class="fa-brands fa-github"></i></a>
+      <a href="https://x.com/"><i class="fa-brands fa-x-twitter"></i></a>
+      <a href="https://www.instagram.com/"><i class="fa-brands fa-instagram"></i></a>
+      </div>
+    </div>
+  </div>
+ </section>
+
+ <script>
+  const sections = document.querySelectorAll('section[id]');
+  const navLinks = document.querySelectorAll('nav a[href^="#"]');
+
+  const byId = (id) => Array.from(navLinks).find(a => a.getAttribute('href') === '#' + id);
+
+  const observer = new IntersectionObserver((entries) => {
+    entries.forEach(entry => {
+      const link = byId(entry.target.id);
+      if (!link) return;
+      if (entry.isIntersecting) {
+        navLinks.forEach(a => a.classList.remove('active'));
+        link.classList.add('active');
+      }
+    });
+  }, { rootMargin: '-40% 0px -55% 0px', threshold: 0 });
+
+  sections.forEach(s => observer.observe(s));
+</script>
+
+<script>
+  const typingSpan = document.querySelector(".typing-text span");
+  const words = ["Product Designer", "Sound Engineer", "Web Developer"];
+  let wordIndex = 0;
+  let charIndex = 0;
+  let typingDelay = 150; // milliseconds per character
+  let erasingDelay = 100; 
+  let newWordDelay = 1800; // pause between words
+
+  function type() {
+    if (charIndex < words[wordIndex].length) {
+      typingSpan.textContent += words[wordIndex].charAt(charIndex);
+      charIndex++;
+      setTimeout(type, typingDelay);
+    } else {
+      setTimeout(erase, newWordDelay);
+    }
+  }
+
+  function erase() {
+    if (charIndex > 0) {
+      typingSpan.textContent = words[wordIndex].substring(0, charIndex - 1);
+      charIndex--;
+      setTimeout(erase, erasingDelay);
+    } else {
+      wordIndex = (wordIndex + 1) % words.length;
+      setTimeout(type, typingDelay);
+    }
+  }
+
+  document.addEventListener("DOMContentLoaded", () => {
+    if(words.length) setTimeout(type, newWordDelay);
+  });
+</script>
+
 </body>
 </html>
