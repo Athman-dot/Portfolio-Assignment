@@ -303,6 +303,10 @@ section p, section li {
   transition: transform 0.3s ease;
 }
 
+.project-card p {
+  color: var(--color-text);
+}
+
 .project-card img {
   width: 100%;
   border-radius: 0.8rem;
@@ -468,4 +472,18 @@ section p, section li {
   transform: scale(1.3) translateY(-5px);
   background-color: var(--color-accent);
   box-shadow: 0 0 25px var(--color-accent);
+}
+
+/* Project Cards */
+.Jam-Bi, .Better {
+  background: #111;
+  padding: 3rem 4rem;
+  border-radius: 1.2rem;
+  box-shadow: 0 0 20px rgba(0, 0, 0, 0.3);
+  transition: transform 0.3s ease;
+}
+
+.Jam-Bi, .Better .project-card h4 {
+  font-size: 1.3;
+  
 }
